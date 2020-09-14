@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Library</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+        <div class="body-wrapper">
+            <header>
+                <h2 class="header-title">MY LIBRARY</h2>
+                <div class="header-box">
+                <button class="add-button">Add Book</button>
+                </div>
+            </header>
+            <main>
+                <h2 class="empty-library"></h2>
+            <div class="hide-wrapper">
+                <div class="card-title">
+                    <button class='last-arrow'>last</button>
+                    <h3 class="book-head"></h3>
+                    <button class='next-arrow'>next</button>
+                </div>
+                <div class="card-wrapper">
+                    <ul class="card-list">
+                        <div>
+                            <h4 class="title-head">Title:</h4>
+                            <p class="title"></p>
+                        </div>
+                        <div>
+                            <h4 class="author-head">Author:</h4>
+                            <p class="author"></p>
+                        </div>
+                        <div>
+                            <h4 class="pages-head"># of pages:</h4>
+                            <p class="pages"></p>
+                        </div>
+                        <div>
+                            <h4 class="status-head">Status:</h4>
+                            <p class="status"></p>
+                        </div>
+                            <div class="stars">
+                                <h4 class="status-head">Rating:</h4>
+                                <i class="fa fa-star" id="one"></i>
+                                <i class="fa fa-star" id="two"></i>
+                                <i class="fa fa-star" id="three"></i>
+                                <i class="fa fa-star" id="four"></i>
+                                <i class="fa fa-star" id="five"></i>
+                            </div>
+                            <button class="edit-button">edit</button>
+                    </ul>
+                </div>
+            </div>
+                <div class=popup-wrapper>
+                    <div class="form-title">
+                        <h3 class="add-book-head">ADD A BOOK</h3>
+                        <button class="form-close">close</button>
+                    </div>
+                    <div class="form-wrapper">
+                        <ul class="form-list">
+                        <div>
+                            <h4 class="add-title-head">Title:</h4>
+                            <input type="text" class="title-input"></input>
+                        </div>
+                        <div>
+                            <h4 class="add-author-head">Author:</h4>
+                            <input type="text" class="author-input"></input>
+                        </div>
+                        <div>
+                            <h4 class="add-pages-head"># of Pages:</h4>
+                            <input type="text" class="pages-input" type="number"></input>
+                        </div>
+                        <div>
+                            <h4 class="radio-head">Reading status:</h4>
+                        </div>
+                            <div class="radio-flex">
+                                <div>
+                                    <input name="form" type="radio" class="finished-radio" value="finished"></input>
+                                    <label for="finished-radio" class="finished-radio-label">read</label>
+                                </div>
+                                <div>
+                                    <input name="form" type="radio" class="unopened-radio" value="unopened"></input>
+                                    <label for="unopened-radio" class="unopened-radio-label">unread</label>
+                                </div>
+                                <div>
+                                    <input name="form" type="radio" class="in-progress-radio" value="in progress"></input>
+                                    <label for="in-progress-radio" class="in-progress-radio-label">reading</label>
+                                </div>
+                            </div>
+                        <div class="stars">
+                        <h4 class="status-head">Rating:</h4>
+                        <i class="fa fa-star" id="one-a"></i>
+                        <i class="fa fa-star" id="two-a"></i>
+                        <i class="fa fa-star" id="three-a"></i>
+                        <i class="fa fa-star" id="four-a"></i>
+                        <i class="fa fa-star" id="five-a"></i>
+                        </div>
+                        <button class="submit">Submit</button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-wrapper-edit">
+                    <div class="edit-title">
+                        <h3 class="edit-book-head">EDIT BOOK</h3>
+                        <button class="edit-form-close">close</button>
+                    </div>
+                    <div class="edit-wrapper">
+                        <ul class="edit-list">
+                        <div>
+                            <h4 class="edit-title-head">Title:</h4>
+                            <input type="text" class="title-edit"></input>
+                        </div>
+                        <div>
+                            <h4 class="edit-author-head">Author:</h4>
+                            <input type="text" class="author-edit"></input>
+                        </div>
+                        <div>
+                            <h4 class="edit-pages-head"># of Pages:</h4>
+                            <input type="text" class="pages-edit" type="number"></input>
+                        </div>
+                        <div>
+                            <h4 class="radio-head-edit">Reading status:</h4>
+                        </div>
+                            <div class="radio-flex">
+                                <div>
+                                    <input name="form" type="radio" class="finished-radio-edit" value="finished"></input>
+                                    <label for="finished-radio" class="finished-radio-label-edit">read</label>
+                                </div>
+                                <div>
+                                    <input name="form" type="radio" class="unopened-radio-edit" value="unopened"></input>
+                                    <label for="unopened-radio" class="unopened-radio-label-edit">unread</label>
+                                </div>
+                                <div>
+                                    <input name="form" type="radio" class="in-progress-radio-edit" value="in progress"></input>
+                                    <label for="in-progress-radio" class="in-progress-radio-label-edit">reading</label>
+                                </div>
+                            </div>
+                            <div class="stars">
+                            <h4 class="status-head">Rating:</h4>
+                            <i class="fa fa-star" id="one-e"></i>
+                            <i class="fa fa-star" id="two-e"></i>
+                            <i class="fa fa-star" id="three-e"></i>
+                            <i class="fa fa-star" id="four-e"></i>
+                            <i class="fa fa-star" id="five-e"></i>
+                            </div>
+                            <div class="edit-buttons">
+                            <button class="reset-rating">reset rating</button>
+                            <button class="submit-edit">Submit</button>
+                            <button class="remove-edit">Remove</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer-box"></div>
+            </footer>
+        </div>
+        </body>
+    <script src="main.js"></script>
+</html>
