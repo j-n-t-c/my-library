@@ -41,6 +41,15 @@ var starsArrayAdd = ['one-a', 'two-a', 'three-a', 'four-a', 'five-a'];
 var ratingAdd = 0;
 var valid = true;
 
+//localStorage
+//allow objects to be set and get
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
 //EDIT STARS - current book shown
 function editStars(array){
         array.forEach(function(element) {
@@ -108,7 +117,7 @@ function addBook (title, author, pages, read, rating) {
 //add books on page load
 addBook('The Hobbit', 'J.R. Tolkien', 245, 'in progress', 5)
 console.log(myLibrary[0].info());
-addBook('Behold a White Whore', 'Philip Róor', 416, 'finished', 3)
+addBook('Behold a White Wizard', 'Philip Róor', 416, 'finished', 3)
 console.log(myLibrary[1].info());
 addBook('How to Kill a Rat', 'Dr. Inrig Montezuma', 99, 'unopened', 1)
 console.log(myLibrary[2].info());
@@ -282,7 +291,6 @@ function removeFromLibrary (index) {
           }
         loadCard(indexCounter);
     } 
-
     }
 }
 removeButton.addEventListener("click", function() {
@@ -297,3 +305,5 @@ resetRatingButton.addEventListener("click", function() {
     })
     editStars(starsArrayEdit);
 })
+
+
